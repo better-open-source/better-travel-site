@@ -1,16 +1,14 @@
-import React from "react"
-import { Layout, ILayoutProps } from "../components/Layout"
-import { SEO } from "../components/Seo"
+import React from "react";
+import { Layout, ILayoutProps } from "../components/Layout/Layout";
+import { SEO } from "../components";
 
 export default class PageNotFound extends React.Component<ILayoutProps, {}>
 {
-    constructor(props: ILayoutProps)
-    {
+    constructor(props: ILayoutProps) {
         super(props);
     }
 
-    public render(): JSX.Element
-    {
+    public render(): JSX.Element {
         return (
             <Layout>
                 <div className="content">

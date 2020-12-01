@@ -1,13 +1,12 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { oc } from "ts-optchain"
-import { graphql, StaticQuery } from "gatsby"
-import { SiteMetadataQueryQuery } from "../types/graphql-types"
+import React from "react";
+import Helmet from "react-helmet";
+import { oc } from "ts-optchain";
+import { graphql, StaticQuery } from "gatsby";
+import { SiteMetadataQueryQuery } from "../../types/graphql-types";
 
-type MetaProps = JSX.IntrinsicElements["meta"]
+type MetaProps = JSX.IntrinsicElements["meta"];
 
-export interface ISeoProps
-{
+export interface ISeoProps {
     description?: string;
     lang?: string;
     meta?: MetaProps[];
@@ -16,13 +15,11 @@ export interface ISeoProps
 
 export class SEO extends React.Component<ISeoProps, {}>
 {
-    constructor(props: ISeoProps)
-    {
+    constructor(props: ISeoProps) {
         super(props);
     }
 
-    public render(): JSX.Element
-    {
+    public render(): JSX.Element {
         return (
             <>
                 <StaticQuery query={graphql`
