@@ -1,9 +1,9 @@
 {
-    "name": "typescript-gatsby-starter",
+    "name": "better-travel-site",
     "private": true,
     "description": "",
-    "version": "0.1",
-    "author": "Grant Bartlett",
+    "version": "0.0.1",
+    "author": "Danisimo",
     "dependencies": {
         "@babel/core": "^7.0.0-0",
         "@types/styled-components": "^5.1.4",

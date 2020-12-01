@@ -1,12 +1,12 @@
 import React from "react";
-import { Layout, SEO } from "../components/";
+import { Layout, SEO, Hero } from "../components";
 
 const HomePage = () => {
 
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<h1> Batter Travel </h1>
+			<Hero />
 		</Layout>
 	);
 };
