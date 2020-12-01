@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `TypeScript Starter`,
+        title: `Better-travel`,
         description: ``,
-        author: ``,
+        author: `Danisimo`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -33,4 +33,4 @@ module.exports = {
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
     ],
-}
+};
