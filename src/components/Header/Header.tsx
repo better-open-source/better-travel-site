@@ -5,11 +5,20 @@ import { FaBars } from 'react-icons/fa';
 import { menuData } from './data/MenuData';
 import { Button } from '../Button';
 
-const Header = () => {
+const Header = ({ toggle }: any) => {
+    const [navbar, setNavbar] = React.useState(false);
+
+    React.useEffect(() => {
+        if (window.location.pathname) {
+            setNavbar(window.location.pathname);
+        }
+
+        console.log(window.location.pathname);
+    }, []);
     return (
         <Nav>
             <NavLink to='/'>Better Travel </NavLink>
-            <Bars />
+            <Bars onClick={toggle} />
             <NavMenu>
                 {menuData.map((item, index) => (
                     <NavLink to={item.link} key={index} >
