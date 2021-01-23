@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const Button = styled(Link) < { primary: boolean, big?: boolean, round: boolean, } > `
+export interface ButtonProps {
+    primary: boolean,
+    big?: boolean,
+    round: boolean,
+    css?: any
+}
+
+const Button = styled(Link) <ButtonProps> `
 background: ${({ primary }) => (primary ? "#F26A2E" : "#077BF1")};
 white-space: nowrap;
 padding: ${({ big }) => (big ? "16px 40px" : "10px 32px")};
@@ -27,3 +34,4 @@ Button.defaultProps = {
 export {
     Button
 };
+

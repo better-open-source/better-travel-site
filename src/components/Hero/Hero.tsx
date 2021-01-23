@@ -32,9 +32,9 @@ const Hero = () => {
                         Out of this world
           </HeroP>
                     <Button
-                        primary="true"
-                        big="true"
-                        round="true"
+                        primary={true}
+                        big={true}
+                        round={true}
                         to="/trips"
                     >
                         Travel Now
@@ -86,7 +86,7 @@ const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-const VideoBg = styled.video`
+const VideoBg = styled.video<any>`
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

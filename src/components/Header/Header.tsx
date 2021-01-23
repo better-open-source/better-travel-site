@@ -1,20 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from 'styled-components';
-import { FaBars } from 'react-icons/fa';
+import { FaBars } from '@react-icons/all-files/fa/FaBars';
 import { menuData } from './data/MenuData';
 import { Button } from '../Button';
 
 const Header = ({ toggle }: any) => {
     const [navbar, setNavbar] = React.useState(false);
 
-    React.useEffect(() => {
-        if (window.location.pathname) {
-            setNavbar(window.location.pathname);
-        }
-
-        console.log(window.location.pathname);
-    }, []);
     return (
         <Nav>
             <NavLink to='/'>Better Travel </NavLink>
