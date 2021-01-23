@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "commonjs",
-    "lib": [
-      "dom",
-      "es2015"
-    ],
+    "lib": ["dom", "es2015"],
     "jsx": "react",
     "moduleResolution": "node",
     "allowJs": true,
@@ -16,11 +13,8 @@
     "plugins": [
       {
         "transform": "ts-optchain/transform"
-      },
-    ],
+      }
+    ]
   },
-  "include": [
-    "src",
-    "src/types/graphql-types.d.ts"
-  ]
+  "include": ["src", "src/types/graphql-types.d.ts"]
 }

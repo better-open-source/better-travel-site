@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
 // eslint-disable-next-line spaced-comment
-import  EmailBg from '../../assets/images/email2.jpg';
-import { Button } from "../index";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import EmailBg from '../../assets/images/email2.jpg';
+import { Button } from '../index';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Email: React.FC = () => {
-    useEffect(() => {
-        Aos.init({});
-      }, []);
-    return  (
-        <EmailContainer>
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+  return (
+    <EmailContainer>
       <EmailContent>
         <h1 data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
           Get Access to Exclusive Offers
@@ -53,8 +53,8 @@ const Email: React.FC = () => {
         </form>
       </EmailContent>
     </EmailContainer>
-    )
-}
+  );
+};
 
 export default Email;
 

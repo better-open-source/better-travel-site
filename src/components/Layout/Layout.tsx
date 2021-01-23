@@ -1,23 +1,19 @@
-import React, { ReactNode } from "react";
-import { Header } from "../Header/Header";
+import React, { ReactNode } from 'react';
+import { Header } from '../Header/Header';
 import { GlobalStyle } from '../styles/GlobalStyles';
 
 export interface ILayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const Layout = ({ children }: ILayoutProps) => {
-
-    return (
-        <>
-            <GlobalStyle />
-            <Header />
-            <main role="main">{children} </main>
-        </>
-    );
-
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+      <main role="main">{children} </main>
+    </>
+  );
 };
 
-export {
-    Layout
-};
+export { Layout };

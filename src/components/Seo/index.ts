@@ -1,5 +1,3 @@
 import { SEO } from './Seo';
 
-export {
-    SEO
-};
+export { SEO };

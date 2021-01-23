@@ -1,47 +1,47 @@
-import React from "react";
-import styled from "styled-components";
-import { menuData } from "./MenuData";
-import { Link } from "gatsby";
-import { Button } from "../index";
-import { FaTimes } from "react-icons/fa";
+import React from 'react';
+import styled from 'styled-components';
+import { menuData } from './MenuData';
+import { Link } from 'gatsby';
+import { Button } from '../index';
+import { FaTimes } from 'react-icons/fa';
 
 export interface DropdownProps {
-    isOpen: boolean,
-    toggle: () => void
+  isOpen: boolean;
+  toggle: () => void;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => {
-    return (
-        <DropdownContainer isOpen={isOpen} onClick={toggle}>
-            <Icon onClick={toggle}>
-                <CloseIcon />
-            </Icon>
-            <DropdownWrapper>
-                <DropdownMenu>
-                    {menuData.map((item, index) => (
-                        <DropdownLink to={item.link} key={index}>
-                            {item.title}
-                        </DropdownLink>
-                    ))}
-                </DropdownMenu>
-                <BtnWrap>
-                    <Button primary={true} round={true} to="">
-                        Book a Flight
-                </Button>
-                </BtnWrap>
-            </DropdownWrapper>
-        </DropdownContainer>
-    )
-}
+  return (
+    <DropdownContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
+        <CloseIcon />
+      </Icon>
+      <DropdownWrapper>
+        <DropdownMenu>
+          {menuData.map((item, index) => (
+            <DropdownLink to={item.link} key={index}>
+              {item.title}
+            </DropdownLink>
+          ))}
+        </DropdownMenu>
+        <BtnWrap>
+          <Button primary={true} round={true} to="">
+            Book a Flight
+          </Button>
+        </BtnWrap>
+      </DropdownWrapper>
+    </DropdownContainer>
+  );
+};
 
 export default Dropdown;
 
 interface DropdownContainerProps {
-    isOpen: boolean,
-    onClick: () => void
+  isOpen: boolean;
+  onClick: () => void;
 }
 
-const DropdownContainer = styled.aside<DropdownContainerProps> `
+const DropdownContainer = styled.aside<DropdownContainerProps>`
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -52,8 +52,8 @@ const DropdownContainer = styled.aside<DropdownContainerProps> `
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${(isOpen) => (isOpen ? "1" : "0")};
-  top: ${(isOpen) => (isOpen ? "0" : "-100%")};
+  opacity: ${(isOpen) => (isOpen ? '1' : '0')};
+  top: ${(isOpen) => (isOpen ? '0' : '-100%')};
 `;
 
 const Icon = styled.div`

@@ -1,48 +1,43 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { Button } from "../index";
-import Video from "../../assets/images/video.mp4";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { Button } from '../index';
+import Video from '../../assets/images/video.mp4';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
-    useEffect(() => {
-        Aos.init({});
-    }, []);
+  useEffect(() => {
+    Aos.init({});
+  }, []);
 
-    return (
-        <HeroContainer>
-            <HeroBg>
-                <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
-            </HeroBg>
-            <HeroContent>
-                <HeroItems>
-                    <HeroH1
-                        data-aos="fade-up"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                    >
-                        Unreal Destinations
+  return (
+    <HeroContainer>
+      <HeroBg>
+        <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
+      </HeroBg>
+      <HeroContent>
+        <HeroItems>
+          <HeroH1
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            Unreal Destinations
           </HeroH1>
-                    <HeroP
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                        data-aos-duration="1000"
-                    >
-                        Out of this world
+          <HeroP
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            Out of this world
           </HeroP>
-                    <Button
-                        primary={true}
-                        big={true}
-                        round={true}
-                        to="/trips"
-                    >
-                        Travel Now
+          <Button primary={true} big={true} round={true} to="/trips">
+            Travel Now
           </Button>
-                </HeroItems>
-            </HeroContent>
-        </HeroContainer>
-    );
+        </HeroItems>
+      </HeroContent>
+    </HeroContainer>
+  );
 };
 
 export default Hero;
@@ -59,7 +54,7 @@ const HeroContainer = styled.div`
   color: #fff;
 
   :before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
