@@ -1,16 +1,15 @@
-import React, { useEffect, FC } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-// eslint-disable-next-line spaced-comment
-import Aos from 'aos';
+// import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { Button } from '../index';
+import { Button } from '../Button';
 import EmailBg from '../../assets/images/email2.jpg';
 
-const Email: FC = () => {
-  useEffect(() => {
-    Aos.init({});
-  }, []);
-  return (
+const Email: FC = () => 
+  // useEffect(() => { // Типизация 
+  //   Aos.init({});
+  // }, []);
+  (
     <EmailContainer>
       <EmailContent>
         <h1 data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
@@ -53,10 +52,10 @@ const Email: FC = () => {
         </form>
       </EmailContent>
     </EmailContainer>
-  );
-};
+  )
+;
 
-export default Email;
+export { Email };
 
 const EmailContainer = styled.div`
   background: linear-gradient(

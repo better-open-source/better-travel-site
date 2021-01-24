@@ -18,8 +18,8 @@ const Dropdown: React.FC<DropdownProps> = ({ isOpen, toggle }) => (
     </Icon>
     <DropdownWrapper>
       <DropdownMenu>
-        {menuData.map((item, index) => (
-          <DropdownLink to={item.link} key={index}>
+        {menuData.map((item) => (
+          <DropdownLink to={item.link} key={item.id}>
             {item.title}
           </DropdownLink>
         ))}

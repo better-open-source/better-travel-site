@@ -81,6 +81,7 @@ const HeroBg = styled.div`
   overflow: hidden;
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const VideoBg = styled.video<any>`
   width: 100%;
   height: 100%;

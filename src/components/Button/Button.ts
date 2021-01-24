@@ -5,10 +5,11 @@ export interface ButtonProps {
   primary: boolean;
   big?: boolean;
   round: boolean;
+  style?: string;
 }
 
-export const Button = styled(Link) <ButtonProps>`
-  background: ${({ primary }) => (primary ? '#F26A2E' : '#077BF1')};
+const Button = styled(Link) <ButtonProps>`
+  background: ${({ primary }) => (primary ? '#1976d2' : '#077BF1')};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '16px 40px' : '10px 32px')};
   color: #fff;
@@ -22,11 +23,13 @@ export const Button = styled(Link) <ButtonProps>`
   border-radius: ${({ round }) => (round ? '50px' : 'none')};
 
   &:hover {
-    background: ${({ primary }) => (primary ? '#077BF1' : '#F26A2E')};
-    transform: translateY(-2px);
+    background: ${({ primary }) => (primary ? '#0964bd' : '#F26A2E')};
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
   }
 `;
 
 Button.defaultProps = {
   big: false,
 };
+
+export { Button };
