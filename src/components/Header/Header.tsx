@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { FaBars } from '@react-icons/all-files/fa/FaBars';
@@ -9,29 +9,36 @@ export interface HeaderProps {
   toggle?: () => void;
 }
 
-const Header: FC<HeaderProps> = ({ toggle }) => (
-  <Nav>
-    <NavLink to="/">Better Travel </NavLink>
-    <Bars onClick={toggle} />
-    <NavMenu>
-      {menuData.map((item, index) => (
-        <NavLink to={item.link} key={index}>
-          {item.title}
-        </NavLink>
-      ))}
-    </NavMenu>
-    <NavBtn>
-      <Button round primary to="/bot-info">
-        {' '}
-        Try Bot
-      </Button>
-    </NavBtn>
-  </Nav>
-);
+const Header: FC<HeaderProps> = ({ toggle }) => {
+  const [navbar, setNavbar] = useState<string>('');
+  useEffect(() => { // Что то сделать с типизацией useEffect
+    if (window.location.pathname) {
+      setNavbar(window.location.pathname);
+    }
+  }, []);
+  return (
+    <Nav navbar={navbar}>
+      <NavLink to="/">Better Travel </NavLink>
+      <Bars onClick={toggle} />
+      <NavMenu>
+        {menuData.map((item) => (
+          <NavLink to={item.link} key={item.id}>
+            {item.title}
+          </NavLink>
+        ))}
+      </NavMenu>
+      <NavBtn>
+        <Button round primary to="/bot-info">
+          {' '} Try Bot
+        </Button>
+      </NavBtn>
+    </Nav>
+  );
+};
 export { Header };
 
-const Nav = styled.nav`
-  background: red;
+const Nav = styled.nav<{ navbar: string }>`
+  background: ${({ navbar }) => (navbar !== '/' ? '#141414' : 'transparent')};
   height: 80px;
   display: flex;
   justify-content: space-between;
