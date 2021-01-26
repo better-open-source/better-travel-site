@@ -6,7 +6,7 @@ const HomePage: React.FC = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    {/* <Email /> Разобраться */}
+    <Email /> 
     <Footer />
   </Layout>
 );

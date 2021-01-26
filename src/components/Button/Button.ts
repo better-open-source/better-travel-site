@@ -6,6 +6,7 @@ export interface ButtonProps {
   big?: boolean;
   round: boolean;
   style?: string;
+  css?: string;
 }
 
 const Button = styled(Link) <ButtonProps>`

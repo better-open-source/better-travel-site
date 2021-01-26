@@ -1,15 +1,15 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import styled from 'styled-components';
-// import Aos from 'aos';
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Button } from '../Button';
 import EmailBg from '../../assets/images/email2.jpg';
 
-const Email: FC = () => 
-  // useEffect(() => { // Типизация 
-  //   Aos.init({});
-  // }, []);
-  (
+const Email: FC = () => {
+  useEffect(() => { // Типизация 
+    Aos.init({});
+  }, []);
+  return (
     <EmailContainer>
       <EmailContent>
         <h1 data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
@@ -32,7 +32,7 @@ const Email: FC = () =>
               type="submit"
               primary={true}
               round={true}
-              style={`
+              css={`
                 height: 48px;
 
                 @media screen and (max-width: 768px) {
@@ -52,8 +52,8 @@ const Email: FC = () =>
         </form>
       </EmailContent>
     </EmailContainer>
-  )
-;
+  );
+};
 
 export { Email };
 
