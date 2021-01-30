@@ -8,16 +8,18 @@ import { Email } from './Email';
 import { Footer } from './Footer';
 import { Stats } from './Stats';
 import { Trips } from './Trips';
+import { Testimonials } from './Testimonials';
 
 export {
   Hero,
   SEO,
-  Layout, 
-  Header, 
-  Button, 
-  Dropdown, 
-  Email, 
-  Footer, 
-  Stats, 
-  Trips
+  Layout,
+  Header,
+  Button,
+  Dropdown,
+  Email,
+  Footer,
+  Stats,
+  Trips,
+  Testimonials
 };

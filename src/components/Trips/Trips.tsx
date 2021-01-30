@@ -94,12 +94,7 @@ const ProductCard = styled.div`
   transition: 0.2s ease;
 `;
 
-interface ProductImgProps {
-  alt: string;
-  src: string;
-}
-
-const ProductImg = styled.img <ProductImgProps>`
+const ProductImg = styled.img`
   height: 100%;
   max-width: 100%;
   position: relative;
