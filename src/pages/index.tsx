@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SEO, Hero, Footer, Email, Trips } from '../components';
+import { Layout, SEO, Hero, Email, Trips } from '../components';
 
 const HomePage: React.FC = () => (
   <Layout>
