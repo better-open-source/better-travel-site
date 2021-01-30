@@ -1,5 +1,5 @@
-import testimonials1 from '../../assets/images/testimonials-1.jpg';
-import testimonials2 from '../../assets/images/testimonials-2.jpg';
+import testimonials1 from '../../assets/images/testimonial-1.jpg';
+import testimonials2 from '../../assets/images/testimonial-2.jpg';
 
 export const TestimonialsData = [
   {

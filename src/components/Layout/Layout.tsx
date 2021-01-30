@@ -7,7 +7,7 @@ import { GlobalStyle } from '../styles/GlobalStyles';
 
 
 const Layout: FC = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);

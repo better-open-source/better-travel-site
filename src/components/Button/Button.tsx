@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export interface ButtonProps {
-  primary: boolean;
+  primary?: boolean;
   big?: boolean;
   round: boolean;
   style?: string;

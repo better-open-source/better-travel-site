@@ -94,7 +94,8 @@ const ProductCard = styled.div`
   transition: 0.2s ease;
 `;
 
-const ProductImg = styled.img`
+const ProductImg = styled.img`  
+  object-fit: cover;
   height: 100%;
   max-width: 100%;
   position: relative;

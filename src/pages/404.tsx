@@ -1,15 +1,37 @@
-import React from 'react';
-import { Layout } from '../components/Layout/Layout';
-import { SEO } from '../components';
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import { Button, Layout, SEO } from '../components';
 
-const PageNotFound: React.FC = () => (
+const NotFoundPage: FC = () => (
   <Layout>
-    <div className="content">
-      <SEO title="404" />
-      <h1>Page 404 - not found</h1>
-      <p className="lead">Page does not exist</p>
-    </div>
+    <SEO title="404: Not found" />
+    <Error>
+      <h1>404</h1>
+      <p>Oh no! Page not found</p>
+      <Button to="/" round={true} big={true}>
+        Return Home
+      </Button>
+    </Error>
   </Layout>
 );
 
-export default PageNotFound;
+export default NotFoundPage;
+
+const Error = styled.div`
+  background: #f26a2e;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: clamp(4rem, 10vw, 20rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: clamp(2rem, 3vw, 10rem);
+    margin-bottom: 2rem;
+  }
+`;
